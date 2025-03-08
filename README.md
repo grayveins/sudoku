@@ -25,7 +25,7 @@ A simple Sudoku game implemented using HTML, CSS, and JavaScript with the Bulma 
 
 ## Usage
 
-Simply open the `index.html` file in your browser:
+Simply open the `sudoku.html` file in your browser:
 
 ```sh
 open sudoku.html
@@ -37,17 +37,11 @@ open sudoku.html
 2. Each row, column, and 3x3 grid must contain numbers 1-9 without repetition.
 3. Click on a cell to enter a number.
 
-## Screenshots
-
-
 
 ## Contributing
 
 Feel free to submit issues or pull requests if you’d like to contribute!
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
