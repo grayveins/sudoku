@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku - High Scores</title>
+
+    <!-- Bulma CSS for styling and responsiveness -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/sudoku.css">
+
+    <!-- High Scores Script (defer ensures it loads after HTML) -->
+    <script defer src="scripts/highscores.js"></script>
+
+    <style>
+        /* Makes the table narrower */
+        .table-container {
+            max-width: 200px; /* Adjust width to match reference */
+            margin: auto; /* Centers the table */
+        }
+
+        /* Fixes table borders for a cleaner look */
+        #high-scores thead tr {
+            border-bottom: 2px solid #000; /* Dark line under header */
+        }
+        #high-scores tbody tr {
+            border-bottom: none !important; /* Removes unnecessary extra lines */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar is-dark">
+            <div class="navbar-brand">
+                <!-- Logo -->
+                <a class="navbar-item">
+                    <img src="images/logo.gif" alt="Sudoku Logo" class="logo">
+                </a>
+                
+                <!-- Site Title -->
+                <a class="navbar-item">Sudoku Centre</a>
+                
+                <!-- Mobile Burger Menu (Toggles Navbar) -->
+                <span class="navbar-burger" data-target="navbarMenu" onclick="document.getElementById('navbarMenu').classList.toggle('is-active')">
+                    <span></span> <span></span> <span></span>
+                </span>
+            </div>
+    
+            <!-- Navigation Links (Aligned to the Left) -->
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">  <!-- Changed from navbar-end to navbar-start -->
+                    <a class="navbar-item" href="sudoku.html">Play Game</a>
+                    <a class="navbar-item" href="high_scores.html">High Scores</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <!-- High Scores Table -->
+    <main class="container mt-5">
+        <div class="table-container">
+            <table id="high-scores" class="table is-fullwidth">
+                <thead>
+                    <tr>
+                        <th class="has-text-weight-semibold">Date</th>
+                        <th class="has-text-weight-semibold">Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Hardcoded high scores for now -->
+                    <tr><td>2021/01/17</td><td>3:41</td></tr>
+                    <tr><td>2021/01/21</td><td>4:01</td></tr>
+                    <tr><td>2021/02/01</td><td>2:52</td></tr>
+                    <tr><td>2021/02/17</td><td>3:08</td></tr>
+                    <tr><td>2021/03/02</td><td>2:51</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>

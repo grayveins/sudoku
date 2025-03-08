@@ -1,0 +1,135 @@
+/* General Page Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Navbar Styling */
+.navbar, .navbar-menu {
+    background-color: #333;
+}
+
+.navbar-item, .navbar-burger {
+    color: white;
+}
+
+/* Sudoku Centre Text */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Game Board Container */
+.board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Sudoku Board */
+#board {
+    border-collapse: collapse;
+    border: 3px solid black;
+    table-layout: fixed; /* Uniform cell sizing */
+    width: 450px;
+    height: 450px;
+}
+
+#board td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid black;
+    vertical-align: middle;
+    line-height: 50px; /* Center text vertically */
+    cursor: pointer;
+}
+
+/* Thick Borders for 3x3 Sections */
+#board td:nth-child(3n) {
+    border-right: 3px solid black;
+}
+#board tr:nth-child(3n) td {
+    border-bottom: 3px solid black;
+}
+
+/* User Input & Error Cells */
+.user-input {
+    background-color: #f2f2f2;
+}
+.error {
+    background-color: #f76c5e !important;
+}
+
+/* Hover & Highlight Effects */
+#board td:hover, .palette td:hover {
+    background-color: #f5dd90;
+}
+
+.highlight {
+    background-color: #e3f2fd !important;
+}
+
+/* Number Selection Palette */
+.palette {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.palette table {
+    border-collapse: collapse;
+}
+
+.palette td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid black;
+    cursor: pointer;
+    line-height: 50px;
+}
+
+/* Undo Button */
+#undo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#undo img {
+    width: 20px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #board {
+        width: 360px;
+        height: 360px;
+    }
+
+    #board td, .palette td {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    #undo img {
+        width: 15px;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+}

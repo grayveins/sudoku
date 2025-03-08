@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku - Play a Game</title>
+    
+    <!-- Bulma for mobile scaling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="styles/sudoku.css">
+    <script defer src="scripts/sudoku.js"></script> <!-- Ensures script loads after HTML -->
+</head>
+<body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Logo -->
+            <a class="navbar-item">
+                <img src="images/logo.gif" alt="Sudoku Logo" class="logo">
+            </a>
+            <!-- Sudoku Centre Title -->
+            <a class="navbar-item has-text-weight-bold">Sudoku Centre</a>
+            <!-- Mobile Burger Menu Button -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- Navigation Menu -->
+        <div id="navMenu" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="sudoku.html" class="navbar-item">Play Game</a>
+                <a href="high_scores.html" class="navbar-item">High Scores</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="section">
+        <div class="container has-text-centered">
+            <!-- Sudoku Board Container -->
+            <div class="board-container">
+                <table id="board" class="mx-auto"></table>
+            </div>
+            <!-- Number Selection Palette -->
+            <div class="palette mt-5">  
+                <table class="mx-auto">
+                    <tbody> 
+                        <tr>
+                            <td class="palette-number">1</td>
+                            <td class="palette-number">2</td>
+                            <td class="palette-number">3</td>
+                            <td class="palette-number">4</td>
+                            <td class="palette-number">5</td>
+                            <td class="palette-number">6</td>
+                            <td class="palette-number">7</td>
+                            <td class="palette-number">8</td>
+                            <td class="palette-number">9</td>
+                            <td id="undo">
+                                <img src="images/undo.png" alt="Undo Last Move">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        // Bulma burger menu toggle for mobile
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+
+            if (burger && menu) {
+                burger.addEventListener('click', () => {
+                    menu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
