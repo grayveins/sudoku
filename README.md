@@ -1,6 +1,6 @@
 # Sudoku Game
 
-![Sudoku Screenshot](sudoku/sudoku.png)  
+![Sudoku Screenshot](sudoku.png)  
 
 
 A simple Sudoku game implemented using HTML, CSS, and JavaScript with the Bulma framework.
